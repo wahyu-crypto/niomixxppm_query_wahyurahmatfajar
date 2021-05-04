@@ -3,6 +3,6 @@
 4. ALTER TABLE regencies RENAME TO kabupaten_kota;
 5. ALTER TABLE districts RENAME TO kecamatan;
 6. ALTER TABLE villages RENAME TO desa;
-7. SELECT district_id, ds.name, prov.name AS provinsi FROM desa ds JOIN provinsi prov WHERE prov.id=11
+7. SELECT district_id AS id_desa, ds.name AS desa, prov.name AS provinsi FROM desa ds JOIN provinsi prov WHERE prov.id=11
 8. SELECT regency_id AS id_kecamatan, kcmt.name AS kecamatan, prov.name AS provinsi FROM kecamatan kcmt JOIN provinsi prov WHERE prov.id=11 AND kcmt.id=1101010
 9. SELECT kbptn.id AS id_kabupaten_kota, kbptn.name AS kabupaten, prov.name AS provinsi FROM kabupaten_kota kbptn JOIN provinsi prov WHERE kbptn.id=1101 AND prov.id=11
